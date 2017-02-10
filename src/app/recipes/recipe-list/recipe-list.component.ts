@@ -1,0 +1,22 @@
+import { Component, OnInit } from '@angular/core';
+
+import { Recipe } from '../recipe';
+import { RecipeItemComponent } from './recipe-item.component';
+
+@Component({
+  moduleId: module.id,
+  selector: 'rb-recipe-list',
+  templateUrl: './recipe-list.component.html'
+})
+export class RecipeListComponent implements OnInit {
+  recipes: Recipe[] = [];
+  recipe = new Recipe('Dummy', 'Dummy', 'http://24.media.tumblr.com/tumblr_lkfk9fZfr91qbpotpo1_400.jpg');
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onSelected(recipe: Recipe) {}
+
+}

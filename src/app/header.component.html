@@ -1,0 +1,24 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded nav-styles">
+    <ul class='nav'>
+        <a class="navbar-brand" href="#">Recipe Book</a>
+        <li class='nav-item'>
+            <a class='nav-link'>Recipes</a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link'>Shopping List</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-toggler-right">
+        <li>
+            <div ngbDropdown class="d-inline-block dropdown-links dropdown">
+                <button class="btn btn-outline-primary" id="loginDropdown" ngbDropdownToggle>
+                    User
+                </button>
+                <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                    <a class="dropdown-item">Login</a>
+                    <a class="dropdown-item">Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

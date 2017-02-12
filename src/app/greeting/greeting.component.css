@@ -1,0 +1,26 @@
+@font-face {
+   font-family: 'Open Sans';
+   src: url('assets/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+.greeting_cambus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting_img {
+  background: url(../../assets/images/ferriswheel001.JPG);
+  width: 800px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  flex-flow: column nowrap;
+}
+
+.greeting_msg_big {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80px;
+}

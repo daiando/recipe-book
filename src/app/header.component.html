@@ -1,24 +1,55 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded nav-styles">
-    <ul class='nav'>
-        <a class="navbar-brand" href="#">Recipe Book</a>
-        <li class='nav-item'>
-            <a class='nav-link'>Recipes</a>
-        </li>
-        <li class='nav-item'>
-            <a class='nav-link'>Shopping List</a>
-        </li>
+<header>
+  <nav>
+    <ul class="siteHeader">
+      <!-- This section gets pushed to the left side-->
+      <li class="siteHeader__section">
+        <div class="siteHeader__item siteHeaderLogo">
+          <i class="fa fa-diamond" aria-hidden="true"></i>
+        </div>
+        <!-- <div class="siteHeader__item siteHeaderButton is-site-header-item-selected">HOME</div> -->
+        <div class="siteHeader__item siteHeaderLink">RECIPES</div>
+        <div class="siteHeader__item siteHeaderLink">SHOPPING LIST</div>
+      </li>
+      <!-- This section gets pushed to the right side-->
+      <li class="siteHeader__section">
+        <div class="siteHeader__item siteHeaderLink">
+          <!-- <a class="login" href="#ex1" rel="modal:open">LOG IN</a> -->
+          <!-- <a data-target="login" class="login open_login_modal">LOG IN</a> -->
+          <a id="demo01" href="#content01" class="login">LOG IN</a>
+        </div>
+      </li>
     </ul>
-    <ul class="nav navbar-toggler-right">
-        <li>
-            <div ngbDropdown class="d-inline-block dropdown-links dropdown">
-                <button class="btn btn-outline-primary" id="loginDropdown" ngbDropdownToggle>
-                    User
-                </button>
-                <div class="dropdown-menu" aria-labelledby="loginDropdown">
-                    <a class="dropdown-item">Login</a>
-                    <a class="dropdown-item">Logout</a>
-                </div>
-            </div>
-        </li>
+  </nav>
+</header>
+
+<div id="content01">
+  <div class="modal-content01">
+    <span class="close-content01">×</span>
+    <ul>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MENU</a></li>
     </ul>
-</nav>
+  </div>
+</div>
+
+<!-- <div id="ex1" style="display:none;">
+  <p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+</div> -->
+
+<!-- LOGIN MODAL -->
+<!-- <div class="login_modal_main" id="login"> -->
+  <!-- モーダルウィンドウが開いている時のオーバーレイ -->
+  <!-- <div class="login_modal_overLay modalClose"></div> -->
+  <!-- モーダルウィンドウの中身 -->
+  <!-- <div class="inner"> -->
+  <!-- <div>
+    PLEASE INPUT YOUR ACCOUNT & PASSWORD !!
+  </div>
+  <p><a class="login_modal_close">RETURN TOP</a></p> -->
+    <!-- <a href="" class="modalClose">Close</a>
+  </div>
+</div> -->

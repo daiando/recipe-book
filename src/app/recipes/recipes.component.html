@@ -1,10 +1,10 @@
 <div class="recipe_mainframe">
   <div class="recipe_left">
-    <!-- <rb-recipe-list (recipeSelected)="selectedRecipe = $event"></rb-recipe-list> -->
-    <rb-recipe-list></rb-recipe-list>
+    <rb-recipe-list (recipeSelected)="selectedRecipe = $event"></rb-recipe-list>
+    <!-- <rb-recipe-list></rb-recipe-list> -->
   </div>
   <div class="recipe_right">
-    recipe detail
+    <rb-recipe-detail [selectedRecipe]="selectedRecipe"></rb-recipe-detail>
   </div>
 </div>
 

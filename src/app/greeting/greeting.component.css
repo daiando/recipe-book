@@ -5,14 +5,15 @@
 
 .greeting_cambus {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .greeting_img {
   background: url(../../assets/images/ferriswheel001.JPG);
-  width: 800px;
-  height: 350px;
+  width: 1000px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content:flex-start;
@@ -21,6 +22,14 @@
 
 .greeting_msg_big {
   color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 80px;
+  font-size: 89px;
+  width: 900px;
+  display: flex;
+  margin-left: 70px;
+  margin-bottom: 30px;
+}
+
+.greeting_msg {
+  color: white;
+  font-size: 40px;
 }

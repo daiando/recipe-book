@@ -15,6 +15,5 @@
 .recipe_right {
   display: flex;
   flex: 0 0 62%;
-  background-color: beige;
-
+  /*background-color: beige;*/
 }

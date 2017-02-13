@@ -1,18 +1,8 @@
 .siteHeader {
-  /**
-  * Lay out the children of this container with
-  * flexbox, which is horizontal by default.
-  */
   display: flex;
-
-  /**
-  * Make the container put as much space as possible
-  * between its children, with the children at either
-  * end laying flush against the container's edges.
-  */
   justify-content: space-between;
-
-  padding: 7px;
+  height: 20px;
+  padding: 3px;
   /*background-color: #56727C;*/
   /*font-family: 'PT Sans', sans-serif;*/
   font-family: 'Ubuntu', sans-serif;
@@ -75,4 +65,5 @@
   justify-content: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
+  color: white;
 }

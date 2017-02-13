@@ -1,0 +1,32 @@
+.recipe_list_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  cursor: default;
+}
+
+.recipe_list_container:hover {
+  background-color: #eff3f5;
+}
+
+.item_title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.item_image {
+  display: flex;
+  margin: 5px;
+}
+
+.item_border {
+  border: 1px solid #D7DBDD;
+}
+
+.item_desc {
+  font-size: 11px;
+}

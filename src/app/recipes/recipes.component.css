@@ -1,3 +1,20 @@
-.inner{
-  padding:1px;
+.recipe_mainframe {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.recipe_left {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  flex: 0 0 37%;
+
+}
+
+.recipe_right {
+  display: flex;
+  flex: 0 0 62%;
+  background-color: beige;
+
 }

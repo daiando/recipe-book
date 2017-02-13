@@ -1,0 +1,26 @@
+.btn_new_recipe {
+  display: flex;
+  height: 30px;
+  margin: 3px 10px;
+  width: 100px;
+  height: 20px;
+  border: 1px solid #D7DBDD;
+  align-items: center;
+  text-align: center;
+  padding: 4px;
+}
+
+.btn_new_recipe:hover {
+  background-color: #fff500;
+  cursor: default;
+  color: #613511;
+}
+
+.recipe_listarea {
+  display: flex;
+  flex-direction:column;
+}
+
+.btn_text {
+  font-size: 12px;
+}

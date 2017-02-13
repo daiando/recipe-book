@@ -1,4 +1,12 @@
-<div class="row">
+<div class="btn_new_recipe">
+  <p class="btn_text">create new recipe</p>
+</div>
+<div class="recipe_listarea">
+  <rb-recipe-item [recipe]="recipe" (click)="onSelected(recipe)"></rb-recipe-item>
+  <!-- <rb-recipe-item></rb-recipe-item> -->
+</div>
+
+<!-- <div class="row">
     <div class="col-md-12">
         <a class="btn btn-success" style="margin-left: -15px;">New Recipe</a>
     </div>
@@ -9,4 +17,4 @@
           <rb-recipe-item [recipe]="recipe" (click)="onSelected(recipe)"></rb-recipe-item>
         </ul>
     </div>
-</div>
+</div> -->

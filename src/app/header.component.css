@@ -204,9 +204,10 @@
 
 .login_enter_btn:hover {
   color:#1a065e;
-  background-color: white;
+  background-color: rgb(217, 230, 245);
   border: 1px solid #1a065e;
   cursor: default;
+  margin-top: -2px;
 }
 
 .loginInput_label {

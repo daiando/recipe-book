@@ -4,6 +4,6 @@ $(function() {
     animatedIn: 'bounceInUp', //OPENアニメーション
     animatedOut: 'bounceOutUp', //CLOSEアニメーション
     animationDuration: '1s', //アニメーションにかける秒数
-    color: 'rgba(0,0,0,0.9)', //背景色
+    color: 'rgba(0, 0, 0, 0.44)', //背景色
   });
 });

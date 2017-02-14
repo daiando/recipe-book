@@ -20,7 +20,7 @@
 
 .item_image {
   display: flex;
-  margin: 5px;
+  margin: 5px 0px 5px 5px;
 }
 
 .item_border {

@@ -10,7 +10,7 @@ import { RecipeItemComponent } from './recipe-item.component';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
-  @Output() recipeSelected = new EventEmitter<Recipe>();
+  @Output() dataListner = new EventEmitter<Recipe>();
   recipe = new Recipe(
     'Ruby on Rails',
     'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin',
@@ -23,7 +23,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   onSelected(recipe: Recipe) {
-  	this.recipeSelected.emit(recipe);
+  	this.dataListner.emit(recipe);
   }
 
 }

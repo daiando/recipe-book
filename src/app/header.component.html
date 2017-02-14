@@ -15,7 +15,7 @@
         <div class="siteHeader__item siteHeaderLink">
           <!-- <a class="login" href="#ex1" rel="modal:open">LOG IN</a> -->
           <!-- <a data-target="login" class="login open_login_modal">LOG IN</a> -->
-          <a id="demo01" href="#content01" class="login">LOG IN</a>
+          <a id="loginmodal" href="#content01" class="login">LOG IN</a>
         </div>
       </li>
     </ul>
@@ -23,22 +23,43 @@
 </header>
 <hr style="border: 1px solid #D7DBDD;">
 
+<!-- login modal : maybe will move to another component -->
 <div id="content01" class="modal-content01">
   <div class="basic_modal_frame basic_modal_frame--fixedWidth">
     <div class="login_inner_top">
-      <h4>SIGN IN</h4>
+      <div class="login_inner_top_left">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+      </div>
+      <div class="login_inner_top_right">
+        <div class="login_inner_top_right_child">
+          Input Your Rakuten Account
+        </div>
+        <div class="login_inner_top_right_child"></div>
+      </div>
     </div>
     <div class="login_inner_middle">
       <div class="loginInput">
         <span class="loginInput_label">
-          <i class="fa fa-diamond" aria-hidden="true"></i>
+          <i class="fa fa-envelope-o loginInput_icon_mail" aria-hidden="true"></i>
         </span>
-        <input class="loginInput_field" placeholder="your company e-mail address">
+        <input class="loginInput_field" placeholder="Rakuten E-mail Address">
+      </div>
+      <div class="loginInput">
+        <span class="loginInput_label">
+          <i class="fa fa-lock loginInput_icon_pass" aria-hidden="true"></i>
+        </span>
+        <input class="loginInput_field" placeholder="Password" type="password">
+      </div>
+      <div class="login_enter">
+        <div></div>
+        <div class="login_enter_btn">
+          Enter
+        </div>
       </div>
     </div>
     <div class="login_inner_bottom">
       <div class="login_left_of_close"></div>
-      <div class="close-content01">close</div>
+      <div class="close-content01">CLOSE</div>
     </div>
   </div>
 </div>

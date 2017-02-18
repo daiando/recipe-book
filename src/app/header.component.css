@@ -13,25 +13,19 @@
   justify-content: space-between;
   height: 20px;
   padding: 3px;
-  /*background-color: #56727C;*/
-  /*font-family: 'PT Sans', sans-serif;*/
   font-family: 'Ubuntu', sans-serif;
 }
 
 .siteHeader__section {
   display: flex;
-
-  /**
-  * Align the children in the center, along
-  * the main axis. By default the children will
-  * align along their top edges.
-  */
   align-items: center;
 }
 
 .siteHeader__item {
   padding: 5px 15px;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .siteHeader__item + .siteHeader__item {
@@ -53,16 +47,57 @@
 .siteHeaderLink {
   cursor: default;
   color: black;
+  list-style:none;
 }
 
 .siteHeaderLink:hover {
   color: skyblue;
 }
 
+.siteHeader_dropdown_frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  padding: 1px;
+}
+
+.siteHeader_dropdown_menu{
+  position: absolute;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  display: none;
+  list-style: none;
+}
+
+.siteHeader_dropdown_frame:hover > .siteHeader_dropdown_menu {
+  display: flex;
+  margin-top: 36px;
+  margin-left: -2px;
+  width:50px;
+  border: 1px solid gray;
+  padding: 1px;
+  background-color: rgb(243, 236, 245);
+}
+
+.siteHeader_dropdown_frame:hover {
+  width: 50px;
+  height: 20px;
+  border: 1px solid gray;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
 .login {
   text-decoration: none;
   cursor: default;
   color: black;
+  list-style:none;
+  display: block;
+  position: relative;
 }
 
 .login:hover {
@@ -87,7 +122,6 @@
   width: 350px;
   height: 400px;
   justify-content: space-between;
-  /*padding: 5px;*/
   margin: 0;
 }
 
@@ -95,7 +129,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /*border-bottom: 1px solid #CAD0D2;*/
   padding: 0;
   margin: 0;
   width: 340px;

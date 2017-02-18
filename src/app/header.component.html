@@ -1,24 +1,36 @@
-<header>
+<header class="z-index: 9999;">
   <nav>
-    <ul class="siteHeader">
+    <div class="siteHeader">
       <!-- This section gets pushed to the left side-->
-      <li class="siteHeader__section">
+      <div class="siteHeader__section">
         <div class="siteHeader__item siteHeaderLogo">
           <i class="fa fa-diamond" aria-hidden="true"></i>
         </div>
         <!-- <div class="siteHeader__item siteHeaderButton is-site-header-item-selected">HOME</div> -->
         <div class="siteHeader__item siteHeaderLink">RECIPES</div>
         <div class="siteHeader__item siteHeaderLink">SHOPPING LIST</div>
-      </li>
+      </div>
       <!-- This section gets pushed to the right side-->
-      <li class="siteHeader__section">
+      <div class="siteHeader__section">
         <div class="siteHeader__item siteHeaderLink">
-          <!-- <a class="login" href="#ex1" rel="modal:open">LOG IN</a> -->
-          <!-- <a data-target="login" class="login open_login_modal">LOG IN</a> -->
-          <a id="loginmodal" href="#content01" class="login">LOG IN</a>
+          <div class="siteHeader_dropdown_frame">
+            <!-- <a class="login" href="#ex1" rel="modal:open">LOG IN</a> -->
+            <!-- <a data-target="login" class="login open_login_modal">LOG IN</a> -->
+            <!-- <a id="loginmodal" href="#content01" class="login">LOG IN</a> -->
+            <a href="#" class="login">USER</a>
+            <div class="siteHeader_dropdown_menu">
+              <div style="height:5px;"></div>
+              <div style="height:5px;"></div>
+              <div><a href="#" class="login">LOG IN</a></div>
+              <div><a href="#" class="login">OTHER</a></div>
+              <div style="height:5px;"></div>
+              <div style="height:5px;"></div>
+
+            </div>
+          </div>
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </nav>
 </header>
 <hr style="border: 1px solid #D7DBDD;">

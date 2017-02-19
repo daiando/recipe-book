@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { Recipe } from '../recipe';
 import { RecipeItemComponent } from './recipe-item.component';
+import { RecipeService } from '../recipe.service'
 
 @Component({
   selector: 'rb-recipe-list',
@@ -9,26 +10,7 @@ import { RecipeItemComponent } from './recipe-item.component';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe(
-      'Ruby on Rails',
-      'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin',
-      '../../../assets/images/1486453061_ruby-rails.png',
-      []
-    ),
-    new Recipe(
-      'dots-three-horizontal',
-      'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin',
-      '../../../assets/entypo/entypo/dots-three-horizontal.svg',
-      []
-    ),
-    new Recipe(
-      'sweden',
-      'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin',
-      '../../../assets/entypo/entypo/sweden.svg',
-      []
-    )
-  ];
+  recipes: Recipe[] = [];
   @Output() dataListner = new EventEmitter<Recipe>();
   // recipe = new Recipe(
   //   'Ruby on Rails',
@@ -36,9 +18,10 @@ export class RecipeListComponent implements OnInit {
   //   '../../../assets/images/1486453061_ruby-rails.png'
   // );
 
-  constructor() { }
+  constructor(private RecipeService: RecipeService) { }
 
   ngOnInit() {
+    this.recipes = this.RecipeService.getRecipes();
   }
 
   onSelected(recipe: Recipe) {

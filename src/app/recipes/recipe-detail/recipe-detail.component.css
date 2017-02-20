@@ -1,0 +1,16 @@
+.ingredient_frame_detail {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  font-family: Ubuntu;
+  font-size: 15px;
+  align-items: center;
+  padding: 1px;
+  justify-content: space-between;
+  border: 1px solid #dfcafa;
+  align-items: center;
+}
+
+.ingredient_list_detail {
+  display: flex;
+}

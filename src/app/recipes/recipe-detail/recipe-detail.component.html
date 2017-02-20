@@ -8,7 +8,7 @@
     <h1>{{selectedRecipeDetail?.name}}</h1>
   </div>
   <div class="col-md-12">
-    <button class="btn btn-success">To Shopping List</button>
+    <button class="btn btn-success" (click)="onAddToShoppingList()">To Shopping List</button>
     <button class="btn btn-primary">Edit</button>
     <button class="btn btn-danger">Delete</button>
   </div>
@@ -21,6 +21,8 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    Ingredients
+    <div class="ingredient_frame_detail">
+      <div class="ingredient_list_detail" style="cursor: pointer" *ngFor="let item of selectedRecipeDetail?.ingredients">{{item.name}} {{item.amount}}</div>
+    </div>
   </div>
 </div>

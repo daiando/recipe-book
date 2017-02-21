@@ -121,6 +121,12 @@
   color: skyblue;
 }
 
+.headermenu_selected {
+  background-color: gray;
+  color: skyblue;
+  border-radius: 5px;
+}
+
 .modal-content01 {
   display: flex;
   align-items: center;

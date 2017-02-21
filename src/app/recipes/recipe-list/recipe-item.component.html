@@ -1,4 +1,4 @@
-<a href="#" class="recipe_list_container" style="text-decoration: none;">
+<a [routerLink]="[recipeId]" class="recipe_list_container" style="text-decoration: none;" routerLinkActive="item_selected">
   <div class="item_title">
     <h4>{{recipe.name}}</h4>
     <p class="item_desc">{{recipe.description}}</p>

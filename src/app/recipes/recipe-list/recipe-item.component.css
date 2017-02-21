@@ -30,3 +30,11 @@
 .item_desc {
   font-size: 11px;
 }
+
+.item_selected {
+  background-color: #fbf9bf;
+}
+
+.item_selected:hover {
+  background-color: #fbf9bf;
+}

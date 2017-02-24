@@ -9,7 +9,7 @@
             id="item-name"
             required
             class="form-control shopping_list_add_input_name"
-            ngModel
+            [ngModel] = "item.name"
             name="name">
         </div>
 
@@ -20,7 +20,7 @@
           id="item-amount"
           required
           class="form-control shopping_list_add_input_amount"
-          ngModel
+          [ngModel] = "item.amount"
           name="amount">
         </div>
       </div>
@@ -28,8 +28,8 @@
         <div>
           <button class="btn_add" type="submit" *ngIf="isAdd" [disabled]="!f.valid">Add</button>
           <button class="btn_save" type="submit" *ngIf="!isAdd" [disabled]="!f.valid">Save</button>
-          <button class="btn_del" type="button" *ngIf="!isAdd">Delete Item</button>
-          <button class="btn_clear" type="button" *ngIf="!isAdd">Clear</button>
+          <button class="btn_del" type="button" *ngIf="!isAdd" (click)="onDelete()">Delete Item</button>
+          <button class="btn_clear" type="button" *ngIf="!isAdd" (click)="onClear()">Clear</button>
         </div>
       </div>
     </form>

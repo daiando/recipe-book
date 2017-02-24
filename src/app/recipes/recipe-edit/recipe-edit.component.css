@@ -1,0 +1,95 @@
+.edit_frame {
+  display: flex;
+}
+
+.edit_form_frame {
+  display: flex;
+  flex-flow: column;
+}
+
+.inner_frame {
+  display: flex;
+  flex-flow: row;
+  width: 400px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.inner_frame_type02 {
+  display: flex;
+  width: 410px;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.inner_frame_input_frame {
+  display: flex;
+  flex-flow: column;
+  width: 500px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  justify-content: flex-start;
+  font-size: 13px;
+}
+
+.input_field {
+  width: 470px;
+  height: 20px;
+  border: 1px solid #ced5d9;
+  border-radius: 4px;
+  margin-top: 3px;
+}
+
+.input_field_small {
+  width: 180px;
+  height: 17px;
+  border: 1px solid #ced5d9;
+  border-radius: 4px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.text_field {
+  width: 470px;
+  height: 150px;
+  border: 1px solid #ced5d9;
+  border-radius: 4px;
+  margin-top: 3px;
+}
+
+.btn_save {
+  background-color: #ccfef0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 70px;
+  margin: 5px;
+}
+
+.btn_cancel {
+  background-color: #fecccc;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 70px;
+  margin: 5px;
+}
+
+.btn_cross {
+  background-color: #ff5c5c;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-top: 1px;
+  /*width: 18px;
+  margin: 2px;
+  padding: 1px;*/
+}
+
+.btn_plus {
+  background-color: #5cc4ff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-top: 1px;
+}

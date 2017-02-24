@@ -1,9 +1,9 @@
-<div class="row" style="display: flex;">
+<div style="display: flex;">
   <div class="col-xs-10">
-    <rb-shopping-list-add></rb-shopping-list-add>
+    <rb-shopping-list-add [item]="selectedItem" (cleared)="onCleared()"></rb-shopping-list-add>
     <hr>
     <div class="ingredient_frame">
-      <div class="ingredient_list" style="cursor: pointer" *ngFor="let item of items">
+      <div class="ingredient_list" style="cursor: pointer" *ngFor="let item of items" (click)="onSelectItem(item)">
         <div class="ingredient_name">
           {{item.name}}
         </div>

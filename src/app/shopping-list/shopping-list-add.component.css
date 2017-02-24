@@ -1,4 +1,62 @@
 .shopping_list_add_frame {
   display: flex;
   font-family: 'Ubuntu';
+  font-size: 14px;
+}
+
+.shopping_list_add_form_frame {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.shopping_list_add_input_frame {
+  display: flex;
+  flex-flow: column;
+}
+
+.shopping_list_add_input_name {
+  width: 250px;
+  border-radius: 5px;
+  height: 20px;
+  border: 1px solid #dbdbdb;
+}
+
+.shopping_list_add_input_amount {
+  width: 100px;
+  border-radius: 5px;
+  height: 20px;
+  border: 1px solid #dbdbdb;
+}
+
+.button_area {
+  display: flex;
+  margin: 20px;
+}
+
+.btn_add {
+  background-color: #ccfef0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.btn_save {
+  background-color: #ccfef0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+
+.btn_del {
+  background-color: #fececc;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.btn_clear {
+  background-color: #cce9fe;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
 }

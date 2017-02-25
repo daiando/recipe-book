@@ -19,7 +19,10 @@ export class RecipeService {
       'dots-three-horizontal',
       'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin',
       '../../../assets/entypo/entypo/dots-three-horizontal.svg',
-      []
+      [
+        new Ingredient('Tomato', 10),
+        new Ingredient('Cheese', 6)
+      ]
     ),
     new Recipe(
       'sweden',
@@ -36,6 +39,14 @@ export class RecipeService {
 
   getRecipe(id: number) {
     return this.recipes[id];
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
+  
+  editRecipe(oldRecipe: Recipe, newRecipe: Recipe) {
+    this.recipes[this.recipes.indexOf(oldRecipe)] = newRecipe;
   }
 
   deleteRecipe(recipe: Recipe) {

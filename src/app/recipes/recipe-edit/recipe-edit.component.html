@@ -1,27 +1,32 @@
 <div class="edit_frame">
-  <form>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
     <div class="edit_form_frame">
       <div class="inner_frame">
-        <button type="submit" class="btn_save">Save</button>
-        <button class="btn_cancel">Cancel</button>
+        <button type="submit" class="btn_save"
+                [disabled]="!recipeForm.valid">
+                Save</button>
+        <button class="btn_cancel" (click)="onCancel()">Cancel</button>
       </div>
       <div class="form-group inner_frame_input_frame">
         <label for="name">Title</label>
         <input
         type="text"
         id="name"
-        class="form-control input_field">
+        class="form-control input_field"
+        formControlName="name">
       </div>
       <div class="form-group inner_frame_input_frame">
         <label for="image-url">Image Url</label>
         <input
         type="text"
         id="image-url"
-        class="form-control input_field">
+        class="form-control input_field"
+        formControlName="imagePath"
+        #imageUrl>
       </div>
       <div class="inner_frame_img_frame">
         <div class="img">
-          <img>
+          <img [src]="imageUrl.value">
         </div>
       </div>
       <div class="form-group inner_frame_input_frame">
@@ -30,18 +35,31 @@
         type="text"
         id="content"
         rows="6"
-        class="form-control text_field"></textarea>
+        class="form-control text_field"
+        formControlName="description"
+        ></textarea>
       </div>
-      <div class="inner_frame_type02">
-        <input
-        type="text"
-        class="form-control input_field_small">
-        <input
-        type="text"
-        class="form-control input_field_small">
-        <button class="btn_cross">x</button>
+      <div class="inner_frame_type02"
+           formArrayName="ingredients"
+           *ngFor="let ingredient of recipeForm.controls['ingredients'].controls; let i = index"
+           >
+        <!-- <div formArrayName="ingredients"> -->
+            <!-- <div *ngFor="let ingredient of recipeForm.controls['ingredients'].controls; let i = index"> -->
+              <div formGroupName="{{i}}">
+                <input
+                type="text"
+                class="form-control input_field_small"
+                formControlName="name">
+                <input
+                type="number"
+                class="form-control input_field_small"
+                formControlName="amount">
+                <button class="btn_cross" (click)="onRemoveItem(i)">x</button>
+              </div>
+            <!-- </div> -->
+          <!-- </div> -->
       </div>
-      <br>
+    <br>
     </div>
   </form>
 </div>
@@ -51,10 +69,12 @@
   <div class="form-group inner_frame_type02">
     <input
     type="text"
-    class="form-control input_field_small">
+    class="form-control input_field_small"
+    #itemName>
     <input
     type="text"
-    class="form-control input_field_small">
-    <button class="btn_plus">+</button>
+    class="form-control input_field_small"
+    #itemAmount>
+    <button class="btn_plus" (click)="onAddItem(itemName.value, itemAmount.value)">+</button>
   </div>
 </div>

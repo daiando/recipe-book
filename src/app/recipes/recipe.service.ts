@@ -1,10 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
+import { Headers, Http, Response } from '@angular/http';
+import 'rxjs/Rx';
 
 import { Recipe } from './recipe'
 import { Ingredient } from '../ingredient'
 
 @Injectable()
 export class RecipeService {
+  recipeChanged = new EventEmitter<Recipe[]>();
+
   private recipes: Recipe[] = [
     new Recipe(
       'Ruby on Rails',
@@ -31,7 +35,7 @@ export class RecipeService {
       []
     )
   ];
-  constructor() { }
+  constructor(private http: Http) { }
 
   getRecipes() {
     return this.recipes;
@@ -44,12 +48,37 @@ export class RecipeService {
   addRecipe(recipe: Recipe) {
     this.recipes.push(recipe);
   }
-  
+
   editRecipe(oldRecipe: Recipe, newRecipe: Recipe) {
     this.recipes[this.recipes.indexOf(oldRecipe)] = newRecipe;
   }
 
   deleteRecipe(recipe: Recipe) {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
+  }
+
+  private apiEndpoint = 'https://recipebook-test-5f4c1.firebaseio.com/recipes.json'
+  storeData() {
+    const body = JSON.stringify(this.recipes);
+    const headers = new Headers({
+      'Content-type': 'application/json'
+    });
+
+    return this.http.put(
+      this.apiEndpoint,
+      body,
+      {headers: headers}
+    );
+  }
+
+  fetchData() {
+    return this.http.get(this.apiEndpoint)
+      .map((response: Response) => response.json())
+      .subscribe(
+        (data: Recipe[]) => {
+          this.recipes = data;
+          this.recipeChanged.emit(this.recipes);
+        }
+      );
   }
 }

@@ -59,7 +59,7 @@
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  width: 60px;
+  width: 130px;
   height: 20px;
   text-align: center;
   padding: 1px;
@@ -77,14 +77,14 @@
   display: flex;
   margin-top: 36px;
   margin-left: -2px;
-  width:60px;
+  width:130px;
   border: 1px solid gray;
   padding: 1px;
   background-color: white;
 }
 
 .siteHeader_dropdown_frame:hover {
-  width: 60px;
+  width: 130px;
   height: 20px;
   border: 1px solid gray;
   margin-left: -1px;
